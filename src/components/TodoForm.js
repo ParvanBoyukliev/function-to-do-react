@@ -10,7 +10,7 @@ export default function TodoForm(props) {
             alert('You must enter a task first.')
             return;
         }
-        props.addTodo(input)
+        props.addTodo(input.trim()) // no more leading & trailing spaces in the text
         setInput('');
     } 
 

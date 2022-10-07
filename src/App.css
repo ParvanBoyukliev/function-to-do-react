@@ -32,6 +32,15 @@ h1 {
   text-decoration: line-through;
 }
 
+.complete .btn-do ,
+.btn-undo{
+  display: none;
+}
+
+.complete .btn-undo{
+  display: inline;
+}
+
 .todo-form {
   margin-bottom: 32px;
 }
