@@ -14,7 +14,7 @@ function App() {
     
     let todo = {id, text, completed: false}
     let newTodos = [todo, ...todos];
-    console.log(newTodos);
+    // console.log(newTodos);
     setTodos(newTodos)
   };
 

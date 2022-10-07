@@ -5,6 +5,11 @@ export default function TodoForm(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        // second layer of defence against empty submit
+        if(input.trim().length === 0){
+            alert('You must enter a task first.')
+            return;
+        }
         props.addTodo(input)
         setInput('');
     } 
@@ -19,11 +24,12 @@ export default function TodoForm(props) {
                 className='todo-input'
                 onChange={(e) => setInput(e.target.value)}
             />
-            <button 
+            <button
+                // first layer of defence against empty submit
+                disabled={!input.trim().length}
                 type='submit'
                 className='todo-button'>Add Todo
             </button>
-
         </form>
     )
 }
